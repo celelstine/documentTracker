@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta name="keywords" content="document, tracker," /> 
+		<meta name="description" content="Platform to share and track documents"/> 
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="author" content="okorocelestine@gmail" />
+		<title> Document Tracker</title>
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<!-- firebase reference -->
+		<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-database.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-messaging.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-storage.js"></script>
+		<script>
+		//firebase storage setup
+		 var config = {
+	            apiKey: "AIzaSyBQ2swuVnEBW4PHKGNXYKLs6ussitWlDTk",
+	            authDomain: "trackdoc-ad797.firebaseapp.com",
+	            databaseURL: "https://trackdoc-ad797.firebaseio.com",
+	            storageBucket: "trackdoc-ad797.appspot.com",
+	            messagingSenderId: "178755390087"
+	          };
+		  	var firedb =firebase.initializeApp(config);
+		</script>
+		<script src="/js/share.js"></script>
+	</head>
+	<body >
+	    <div class="header">
+	   		<div class="logo">
+				<p style="margin:0px;"> dt </p>
+	   		</div>
+
+	   		<div class="title">
+					Document Tracker
+	   		</div>
+
+	   		
+			<hr style="width:900px; margin-left:180px" />
+			
+			
+			<div class="menu">
+				<a href="/" > Home  </a>&nbsp;
+				<a href="/search" > Search </a>&nbsp;
+				<a href="/signout" > Sign Out  </a>&nbsp;
+			</div>
+	   	</div>
+
+	   	
+			<div class="share" >
+				<fieldset style="width:80%;padding-left:10px">
+						<legend> Upload files and share </legend> 
+						<input id="localFile" name="localFile" type="file" style="width:90%" multiple />  <br />
+						<button type="button" style="float:right;font-size:15px"  id="upload" onclick="upload()"> Upload </button>
+					</fieldset>
+
+				<br />
+				<form action="/share" method="post">
+					<p class="share-head"> Share Document	</p>
+					<p id="result" > </p>
+					
+					<p> <input type="text"  name="title" class="txttitle" placeholder="Enter a title" required/></p>
+					<p> <input type="text"  name="docurl" id="docurl" class="txttitle" placeholder="Paste url " required/></p>
+					<p>	<input type="text"  name="keywords" class="txttitle" placeholder="Enter keywords -sales,business"  required/> </p>
+					<fieldset style="width:80%;padding-left:20px">
+						<legend> Concerned Department </legend> 
+						<input type="checkbox" name="key1" value="Finance"> &nbsp; Finance<br>
+						<input type="checkbox" name="key2" value="Operations"> &nbsp; Operations<br>
+						<input type="checkbox" name="key3" value="Marketing"> &nbsp; Marketing<br>
+						<input type="checkbox" name="key4" value="Recruitment"> &nbsp; Recruitment<br>
+						<input type="checkbox" name="key5" value="Sales"> &nbsp; Sales<br>
+						<input type="checkbox" name="key6" value="Success"> &nbsp; Success<br>
+						<input type="checkbox" name="key7" value="Training"> &nbsp; Training<br>
+					</fieldset>	
+					<br />
+						<button type="submit" style="float:right;font-size:20px"  id="share" ss>Share </button>	 
+					</p>
+				</form>
+			</div>
+
+		
+	</body>
+</html>

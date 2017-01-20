@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+	<head> 
+		<meta name="keywords" content="document, tracker," /> 
+		<meta name="description" content="Platform to share and track documents"/> 
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="author" content="okorocelestine@gmail" />
+		<title> Document Tracker</title>
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+
+		<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">  </script> -->
+	    
+	</head>
+	<body >
+	   <div class="header">
+	   		<div class="logo">
+				<p style="margin:0px;"> dt </p>
+	   		</div>
+
+	   		<div class="title">
+					Document Tracker
+	   		</div>
+			<hr style="width:900px; margin-left:180px" />
+	   		
+
+	   </div>
+	  
+	  <div class="login">
+
+		<form  action="/login" method="post" >
+			<div class="login-header" > <p> Log in </p> </div>
+			<p id="result" style="margin-left:5px;margin-top:-20px" >  </p>
+			<p> <input type="text" name="email" class="txtusername" placeholder="Username" /> </p> 
+			<p><input type="password" name="password" class="txtpassword" placeholder="Password"  /> </p>
+			<p style="font-size:20px;">
+			 user <a href="/signup" > &raquo;  Signup </a>&nbsp;
+			 <button type="submit" style="font-size:20px;float:right;margin-right:10px"  id="login"> Login</button> 
+			</p> <br />
+			<p>  <a href='/gSign' > Google sign in </a>
+			
+		</form>
+	  </div>
+	<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-database.js"></script>
+
+      <script>
+        // Initialize Firebase
+		var config = {
+            apiKey: "AIzaSyBQ2swuVnEBW4PHKGNXYKLs6ussitWlDTk",
+            authDomain: "trackdoc-ad797.firebaseapp.com",
+            databaseURL: "https://trackdoc-ad797.firebaseio.com",
+            storageBucket: "trackdoc-ad797.appspot.com",
+            messagingSenderId: "178755390087"
+          };
+  		firebase.initializeApp(config);
+
+	  
+      </script>
+
+	</body>
+
+</html>

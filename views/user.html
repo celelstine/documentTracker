@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta name="keywords" content="document, tracker," /> 
+		<meta name="description" content="Platform to share and track documents"/> 
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="author" content="okorocelestine@gmail" />
+		<title> Document Tracker</title>
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+	</head>
+	<body >
+	    <div class="header">
+	   		<div class="logo">
+				<p style="margin:0px;"> dt </p>
+	   		</div>
+
+	   		<div class="title">
+					Document Tracker
+	   		</div>
+
+	   		
+			<hr style="width:900px; margin-left:180px" />
+			
+			
+			<div class="menu">
+				<input type="text" name="txttitle" class="txtsearch" placeholder="Search" /> &nbsp;
+				<button type="button" > Tag </button> &nbsp;
+				<button type="button" >Department</button> &nbsp;
+				<button type="button" >Title</button> &nbsp;
+				<button type="button" >people</button> &nbsp;
+			</div>
+	   	</div>
+
+	   	
+	   	<div class="content">
+		    <div class="dashboard">
+		  
+			  	<div class="doc">
+					<div class="share-info">
+						<div class="user-initial">
+							<p style="margin:0px;"> oc </p>
+						</div>
+							<p style="margin:0px;"> Okoro Celestine </p>
+						<div class="doc-title" >
+							The payroll for the month
+						</div>
+						
+						<div class="share-date">
+							17/01/2017
+						</div>	
+					</div>
+					
+					<div class="share-preview">
+						Every child wants to say something like “good bye, mum”, but some cannot. A lot of elements limit a child’s speech such as emptiness, social phobia and inability to produce suitable sound. Stammering is the inability to produce a steady flow of sound; it has no pure cause and no perfect solution. 
+					</div>
+					
+					<div class="share-react">
+						<button type="button" >Acknowledge</button> &nbsp;
+						<button type="button" >download</button> &nbsp;
+					</div>
+				</div>
+		  
+		 	</div>
+
+			 <!-- profile section -->
+
+			<div class="profile" >
+
+				<p class="username" id="usermail"> </p>
+				<p class="setting">
+				 <button type="button" id="profileEdit" onclick="window.location.href='/page2'">Edit</button>  
+				 <button type="button" id="logout" onclick="window.location.href='/logout'">Log out</button> 
+				</p>
+
+				<div >
+					<form >
+						<fieldset class="signup">
+					  		<legend style="font-size:20px"> Profile </legend>
+					  		<p id="result" >  </p>
+					  		<p><input type="text" id="fname" class="signuptxt" placeholder="First Name" required /> </p> <br />
+					  		<p><input type="text" id="lname" class="signuptxt" placeholder="Last Name" required /> </p> <br />
+					  		<p><input type="text" id="email" class="signuptxt" placeholder="Email" required /> </p> <br />
+					  		<p><input type="password" id="pasword" class="signuptxt" placeholder="Password" required /> </p> <br />
+					  		
+					  		<p><input type="text" id="department" class="signuptxt" placeholder="Department" required /> </p> <br />
+					  		<p> Describe yourself here... &nbsp; 
+					  			<textarea id="bio" cols="25" rows="8" class="biotxt"  placeholder="Describe yourself here...">  </textarea>  
+					  		</p> <br />
+					  		<p> <button type="button" style="width:70px; height:20px; float:right;margin-top:-15px"  >Send</button>  </p>
+	  					</fieldset>	
+					</form>
+				</div>
+			</div>
+
+			<div class="share" >
+				<form  action="/share" method="post" >
+					<p class="share-head"> Share Document </p>
+					<p id="result" >  </p>
+					<p><input type="text"  id="title" class="txttitle" placeholder="title" required /> </p> <br />
+					<p class="noteshort"> Write a short note...  
+						<textarea id="bio" cols="39" rows="8"   placeholder="Describe yourself here...">  </textarea>  
+					</p> <br />
+					<p >Document &nbsp; <input id="doc" type="file" > </p> <br />
+					<div class="tag-list">
+					  tag-list
+					</div>
+					<p><input type="text" id="texttag" class="txttitle" placeholder="Tags" /> </p>
+					<div class="department-list">
+					</div>
+					<p><input type="text" id="textdept" class="txttitle" placeholder="Department" /> </p>
+					<p><button type="submit" style="width:70px;float:right; height:20px"  id="btnshare">Share </button>	 </p>
+				</form>
+			</div>
+
+		</div>
+		
+	</body>
+</html>

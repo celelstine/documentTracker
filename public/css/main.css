@@ -1,0 +1,351 @@
+body {
+	background-color:#EEEEEE;
+	color:#333333;
+	width: 98%;
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: #333333;
+}
+
+a:link {
+	text-decoration: none;
+	color: #333333;
+}
+
+button {
+border-width : 0px;
+background-color: #ffffff;
+color: #333333;
+font-weight: bold;
+}
+
+/* style for header begin  */
+.header{
+background-color:#ffffff;
+width:100%;
+height:20%;
+top:0px;
+margin-top:-5px;
+padding-top:10px;
+padding-bottom: 10px;
+}
+
+.logo{
+color:#DADADA;
+background-color:#333333;
+width:30px;
+height:30px;
+float:left;
+margin-left:200px;
+font-size:28px;
+padding:0px;
+text-align:center;
+font-style:italic;
+border-radius:15px;
+margin-right:10px;
+
+}
+
+
+
+.title{
+float:left;
+width: 20%;
+margin-left:20px;
+font-size:28px;
+margin-right:400px;
+}
+
+
+
+.menu{ 
+margin-left:240px;
+font-size:large;
+
+}
+
+/* style for header end  */
+
+.content {
+	width: 100%;
+	height: 75%;
+}
+/* style for share begin  */
+
+.dashboard{
+	width:55%;
+	background-color:#EEEEEE;
+	margin-left:260px;
+	padding-top: 12px;
+	padding-bottom :10px;
+	padding-left: 5px;
+}
+
+.doc {
+background-color:#ffffff;
+width:97%;
+margin-top:5px;
+overflow:hidden;
+padding-top: 12px;
+padding-left: 10px;
+padding-right: 10px;
+height:auto;
+}
+
+.user-name{
+height:40%;
+width:30%;
+float:left;
+margin-left:20px;
+font-size:20px;
+font-style:italic;
+overflow: hidden;
+margin-top: -8px;
+color: #091BC1
+
+}
+
+.share-date{
+	width:10%;
+	height:40%;
+	float:right;
+	margin-left:20px;
+	font-size:15px;
+	margin-top: -8px;
+	color:#091BC1
+}
+
+.share-title1{
+	width:40%;
+	height:40%;
+	float:left;
+	margin-left:40px;
+	font-size:22px;
+	overflow: hidden;
+	margin-top: -8px;
+	color :#091BC1
+
+}
+
+.share-url1{
+	width:98%;
+	height:40%;
+	float:left;
+	margin-left:0px;
+	font-size:18px;
+	overflow: hidden;
+	margin-top: -8px;
+	color: #000053;
+	text-align: center;
+
+}
+
+.share-info{
+float:left;
+width :100%;
+
+}
+
+
+
+.txtsearch{
+	border-width :0px;
+	background-color: #FFFFFF;
+	width: 250px;
+	height: 20px;
+	font-size: large;
+	padding-left: 5px;
+	margin-left: 200px
+}
+
+
+
+.doc-title {
+	float: left;
+	margin-left: 130px;
+	margin-top: -19px;
+	font-size: large;
+	font-style: italic;
+	width: 290px;
+	overflow: hidden;
+	padding-left: 10px;
+}
+
+.share-title {
+	float: left;
+	margin-left: 130px;
+	margin-top: -19px;
+	font-size: large;
+	font-style: italic;
+	width: 70%;
+	overflow: hidden;
+	padding-left: 10px;
+}
+
+
+
+.share-title{
+	float: left;
+	font-style: italic;
+	overflow: hidden;
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.doc-react{
+	text-align: right;
+}
+
+/** style for share end */
+
+/** style for profile begin */
+
+.profile{
+	width:18%;
+	float: left;
+	background-color:#ffffff;
+	margin-left:0px;
+	margin-top: -151px;
+	padding-top: 12px;
+	padding-bottom :10px;
+	padding-left: 5px;
+
+}
+
+
+
+.username{ 
+	margin-top: 0px;
+	padding-left: 2px;
+}
+
+.setting{
+	float: right;
+	margin-top: -34px;
+	padding-right: 2px;
+}
+/** style for profile end */
+
+/** style for share begin */
+
+.share {
+	width:23%;
+	background-color:#ffffff;
+	margin-top: -150px;
+	padding-top: 12px;
+	padding-bottom :10px;
+	padding-left: 5px;
+	margin-top: 10px;
+	margin-left: 400px;
+	height: 90%;
+}
+
+.share-head{ 
+	margin-top: -5px
+}
+
+.txttitle{
+	border-width :1px;
+	background-color: #FFFFFF;
+	width: 90%;
+	height: 25px;
+	font-size: large;
+	padding-left: 5px;
+}
+
+.noteshort{
+	margin-top: -18px;
+	margin-bottom: -20px;
+}
+.tag-list{
+	background-color: red;
+	width : 90%;
+	overflow: hidden;
+	padding-left : 5px;
+	margin-top: -18px;
+	height: 25px;
+}
+
+.txttag{
+	border-width :0px;
+	background-color: #FFFFFF;
+	width: 250px;
+	height: 20px;
+	font-size: large;
+	padding-left: 5px;
+
+}
+
+.department-list{
+	background-color: red;
+	width : 90%;
+	overflow: hidden;
+	margin-top: -8px;
+	height: 25px;
+}
+
+
+
+
+
+/** style for share end */
+
+/**  **/
+
+.signup{
+background-color:#fffffe;
+width:30%;
+height:50%;
+top:0px;
+margin-top:50px;
+margin-left: 400px;
+}
+
+.signuptxt{
+	float: left;
+	margin: 10px;
+	font-size: large;
+	font-style: italic;
+	width: 94%;
+	overflow: hidden;
+
+}
+/**  **/
+/**  style for login  **/
+.login{
+background-color:#fffffe;
+width:300px;
+height:180px;
+top:0px;
+margin-top:50px;
+margin-left: 400px;
+}
+
+.login-header{
+	background-color: #828282;
+	font-size: 34px;
+	width: 100%;
+}
+.txtusername{ 
+	margin-left: 5px;
+	width : 90%;
+	height: 20px;
+	margin-bottom: 5px;
+}
+
+.txtsearch {
+	margin-left: 5px;
+	width : 40%;
+	height: 20px;
+	margin-bottom: 5px;
+}
+.txtpassword{
+	margin-left: 5px;
+	width : 90%;
+	height: 20px;
+	margin-top: 0px;
+}

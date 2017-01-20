@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta name="keywords" content="document, tracker," /> 
+		<meta name="description" content="Platform to share and track documents"/> 
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="author" content="okorocelestine@gmail" />
+		<title> Document Tracker</title>
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+
+		<!-- firebase reference -->
+		<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-database.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-messaging.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-storage.js"></script>
+		<script>
+		//firebase storage setup
+		 var config = {
+	            apiKey: "AIzaSyBQ2swuVnEBW4PHKGNXYKLs6ussitWlDTk",
+	            authDomain: "trackdoc-ad797.firebaseapp.com",
+	            databaseURL: "https://trackdoc-ad797.firebaseio.com",
+	            storageBucket: "trackdoc-ad797.appspot.com",
+	            messagingSenderId: "178755390087"
+	          };
+		  	var firedb =firebase.initializeApp(config);
+		</script>
+		<script type="text/javascript" src="/js/index.js"></script>
+	</head>
+	<body onload="loadDB();">
+	    <div class="header">
+	   		<div class="logo">
+				<p style="margin:0px;"> dt </p>
+	   		</div>
+
+	   		<div class="title">
+					Document Tracker
+	   		</div>
+
+	   		
+			<hr style="width:900px; margin-left:180px" />
+			
+			
+			<div class="menu">
+				<a href="/search" > Search </a>&nbsp;
+				<a href="/share" > Share  </a>&nbsp;
+				<a href="/signout" > Sign Out  </a>&nbsp;
+
+			</div>
+	   	</div>
+
+	   	
+	   	<div class="content">
+		    <div class="dashboard" id="dashboard">
+		  
+			
+		  
+		 	</div>
+
+			
+		</div>
+	
+	</body>
+</html>
