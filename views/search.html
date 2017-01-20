@@ -27,7 +27,7 @@
 		</script>
 		<script type="text/javascript" src="/js/search.js"></script>
 	</head>
-	<body onload="deepSearch()">
+	<body onload="fecthSearchHistory()">
 	    <div class="header">
 	   		<div class="logo">
 				<p style="margin:0px;"> dt </p>
@@ -42,7 +42,8 @@
 			
 			
 			<div class="menu">
-				<input type="text" name="txtsearch" class="txtsearch" id="txtsearch" placeholder="Type search string " required/>  
+				<input type="text" name="txtsearch" class="txtsearch" id="txtsearch" list="searchlog" placeholder="Type search string " required/>  <datalist id="searchlog" >
+				</datalist>
 				<a href="/" > Home  </a>&nbsp;
 				<a href="/share" > Share  </a>&nbsp;
 				<a href="/signout" > Sign Out  </a>&nbsp;

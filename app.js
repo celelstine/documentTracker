@@ -278,12 +278,13 @@ app.post('/share', (req, res) => {
         for( key in users ) {
       
           var curUser = users[key];
-         console.log(curUser);
+         //console.log(curUser);
 
           if ( curUser.id == uid ) {
-            //console.log(curUser.uid + '3' + uid);
-            curusername1 = curUser.fname + '  ' + curUser.lname;
-            //lazy load
+            console.log(curUser.id + '3' + uid);
+            curusername1 = curUser.name;
+            //lazy 
+            console.log( curUser.fname );
             var  newshare = {
                   "dateReg" : date,
                     "departments" : dept,
