@@ -43,19 +43,13 @@ function deepSearch(category,searchString) {
 		// clear the content
 		document.getElementById("dashboard").innerHTML = "";
 		var shareRef = firedb.database().ref('trackdoc/shared'),
-			searchStringRef = firedb.database().ref('trackdoc/searchString'),
 			shared,
-			oldsearchstring,
 			dashboard = document.getElementById("dashboard"),
 			pass = null,
 			foundCount=0;
 
 		// update searchlog searchString
-		searchStringRef.on('value', function(snapshot) {
-			oldsearchstring = snapshot.val();
-		)}
-		oldsearchstring += ',' + searchString.toString();
-		firedb.database().ref('trackdoc').update({"searchHistory" :oldsearchstring});
+		
 
 		// fetch department
 		 shareRef.orderByChild("dateReg").on('value', function(snapshot) {
