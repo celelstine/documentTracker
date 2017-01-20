@@ -14,6 +14,26 @@ function getUrlParameter(url) {
 	return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
 
+function fecthSearchHistory() {
+	var x = document.createElement("DATALIST");
+	var searchHistoryRef = firedb.database().ref('trackdoc/searchHistory');
+	var history;
+	var option;
+	searchHistoryRef.on('value', function(snapshot) {
+		history = snapshot.val();
+	})
+
+	var searchArray = history.split(',');
+	for (var i =0 ; i<searchString.length;i++) {
+		option += '<option value="'+searchString[i]+'" />';
+	}
+
+	var my_list=document.getElementById("searchlog"); 
+	my_list.innerHTML = option;
+
+
+
+}
 //function to load tags and department
 function deepSearch(category,searchString) {
 
@@ -23,10 +43,19 @@ function deepSearch(category,searchString) {
 		// clear the content
 		document.getElementById("dashboard").innerHTML = "";
 		var shareRef = firedb.database().ref('trackdoc/shared'),
+			searchStringRef = firedb.database().ref('trackdoc/searchString'),
 			shared,
+			oldsearchstring,
 			dashboard = document.getElementById("dashboard"),
 			pass = null,
 			foundCount=0;
+
+		// update searchlog searchString
+		searchStringRef.on('value', function(snapshot) {
+			oldsearchstring = snapshot.val();
+		)}
+		oldsearchstring += ',' + searchString.toString();
+		firedb.database().ref('trackdoc').update({"searchHistory" :oldsearchstring});
 
 		// fetch department
 		 shareRef.orderByChild("dateReg").on('value', function(snapshot) {
