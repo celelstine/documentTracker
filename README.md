@@ -3,17 +3,17 @@
 
 
 ## Introduction
-*  **`documentTracke`** is a express Powered Document hub
+*  **`documentTracker`** is a express Powered Document hub
 *  It has the following features;
-  *  Login via username and password
-  *  Allows uploadi of documents 
+  *  Login via email and password
+  *  Allows upload of documents 
   *  Allows users to search for document on the following category including;
     *  Department
     *  Date
     *  Title 
     *  Keywords
     *  People
-  *  Allows users to share public url
+  *  Allows users to share public url 
 *  Click [here](http://documentshub.herokuapp.com/) to access the app on Heroku
 
 ## Dependencies
@@ -21,10 +21,10 @@
 ### Back End Dependencies
 *  This app's functionality depends on back end packages;
   *  **Express** - This framework helps is essential in the creation of  object relational models and it also handles routing on the back end.
-  *  **Firebase** - This framework is used as the database and file storage directory.
+  *  **Firebase** - This framework is used as the database and file storage platform.
 
 ## Front End Dependencies
-* The project depend on no external framework
+* The project depend on no external front end framework, it was design with css,html and javascript
 
 ## Installation and setup
 - Download the file from the repository or use the git command `git clone https://github.com/celelstine/documentTracker` to clone the
