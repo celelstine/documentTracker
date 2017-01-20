@@ -17,19 +17,22 @@ function getUrlParameter(url) {
 function fecthSearchHistory() {
 	var x = document.createElement("DATALIST");
 	var searchHistoryRef = firedb.database().ref('trackdoc/searchHistory');
-	var history;
 	var option;
+
 	searchHistoryRef.on('value', function(snapshot) {
-		history = snapshot.val();
+		var history = snapshot.val();
+		console.log(history);
+		var searchArray = history.split(',');
+		for (var i =0 ; i<searchArray.length;i++) {
+			option += '<option value="'+searchArray[i]+'" />';
+		}
+
+		var my_list=document.getElementById("searchlog"); 
+		my_list.innerHTML = option;
+		
 	})
-
-	var searchArray = history.split(',');
-	for (var i =0 ; i<searchString.length;i++) {
-		option += '<option value="'+searchString[i]+'" />';
-	}
-
-	var my_list=document.getElementById("searchlog"); 
-	my_list.innerHTML = option;
+	
+	
 
 
 
@@ -49,7 +52,7 @@ function deepSearch(category,searchString) {
 			foundCount=0;
 
 		// update searchlog searchString
-		
+
 
 		// fetch department
 		 shareRef.orderByChild("dateReg").on('value', function(snapshot) {
